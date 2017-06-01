@@ -1,0 +1,15 @@
+<div>
+    <div class="ui form">
+        <div class="required field">
+            <label>Title</label>
+            <input type="text" placeholder="Idea title &hellip;" required>
+        </div>
+        <div class="field">
+            <markdown-editor ng-model="abc"></markdown-editor>
+        </div>
+        <div class="field">
+            <label>Keywords</label>
+            <multi-select ng-model="hello" source="['a', 'b', 'c']" placeholder="Select tags &hellip;"></multi-select>
+        </div>
+    </div>
+</div>

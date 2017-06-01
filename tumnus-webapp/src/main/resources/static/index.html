@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Bin">
+<head>
+    <meta charset="UTF-8">
+    <title>Bin</title>
+    <link rel="stylesheet" href="lib/semantic/dist/semantic.css">
+    <link rel="stylesheet" href="app/css/main.css">
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/semantic/dist/semantic.js"></script>
+    <script src="lib/showdown/dist/showdown.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="lib/ace-builds/src-min-noconflict/ace.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-ace/ui-ace.js"></script>
+    <script type="text/javascript" src="lib/angular-markdown-filter/markdown.js"></script>
+    <script src="app/modules/editor.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/directives/multi-select.js"></script>
+    <script src="app/controllers/profile.js"></script>
+</head>
+<body>
+<div class="ui fixed inverted menu">
+    <div class="ui container">
+        <a href="#!/" class="header item">IdeaBin</a>
+        <div class="ui category search item">
+            <div class="ui icon input">
+                <input class="prompt" type="text" placeholder="Search animals...">
+                <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+        </div>
+        <div class="right menu">
+            <div class="item">
+                <a class="ui positive button" href="#!/add"><i class="plus icon"></i> Add</a>
+            </div>
+            <div class="ui simple dropdown item">
+                <i class="user icon"></i> </i>
+                <div class="menu">
+                    <a class="item" href="#!/profile"><i class="street view icon"></i> Profile</a>
+                    <div class="divider"></div>
+                    <a class="item" href="/logout"><i class="sign out icon"></i> Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-view class="ui main container"></ng-view>
+</body>
+</html>

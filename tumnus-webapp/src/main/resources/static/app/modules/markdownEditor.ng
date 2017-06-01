@@ -1,0 +1,8 @@
+<div class="ui segment">
+    <div ng-show="!preview" ui-ace="options" ng-model="ngModel"></div>
+    <div ng-show="preview" ng-bind-html="ngModel | markdown" class="ace_preview"></div>
+    <a class="ui blue right corner label" ng-click="togglePreview()">
+        <i ng-if="!preview" class="code icon"></i>
+        <i ng-if="preview" class="unhide icon"></i>
+    </a>
+</div>

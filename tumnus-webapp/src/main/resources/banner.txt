@@ -1,0 +1,7 @@
+
+${AnsiColor.BLUE} _  _   __  ____  __  ____  ____  _  _
+${AnsiColor.BLUE}( \/ ) /  \(_  _)/  \(  _ \(  __)( \/ )
+${AnsiColor.BLUE}/ \/ \(  O ) )( (  O ))   / ) _)  )  (
+${AnsiColor.BLUE}\_)(_/ \__/ (__) \__/(__\_)(____)(_/\_)
+${AnsiColor.BRIGHT_RED}~~~------------> tumnus <-- ${application.version} --~
+

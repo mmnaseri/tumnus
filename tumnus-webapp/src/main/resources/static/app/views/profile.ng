@@ -1,0 +1,39 @@
+<div class="ui horizontal list">
+    <div class="item">
+        <i class="ui large teal inverted circular user icon"></i>
+        <div class="content">
+            <div class="ui sub header">Profile</div>
+            Manage your account
+        </div>
+    </div>
+</div>
+<div class="ui divider"></div>
+<form class="ui {{loading ? 'loading' : ''}} form" name="profileUpdateForm" ng-submit="saveProfile()">
+    <div class="ui positive message" ng-show="saved">
+        <p>Your profile details have been saved.</p>
+    </div>
+    <div class="ui visible error message" ng-show="error">
+        <p>{{error}}</p>
+    </div>
+    <div class="field">
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Name" ng-model="user.name">
+    </div>
+    <div class="field {{profileUpdateForm.email.$touched && profileUpdateForm.email.$invalid ? 'error' : ''}}">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email" ng-model="user.email" required>
+    </div>
+    <div class="field {{profileUpdateForm['password-current'].$invalid ? 'error' : ''}}">
+        <label>Current Password</label>
+        <input type="password" name="password-current" placeholder="Current password" ng-model="user.currentPassword">
+    </div>
+    <div class="required field {{profileUpdateForm['password-new'].$touched && profileUpdateForm['password-new'].$invalid ? 'error' : ''}}">
+        <label>New password</label>
+        <input type="password" name="password-new" placeholder="New Password" ng-disabled="!user.currentPassword" ng-model="user.newPassword" ng-required="user.currentPassword">
+    </div>
+    <div class="required field {{profileUpdateForm['password-confirm'].$touched && profileUpdateForm['password-confirm'].$invalid ? 'error' : ''}}">
+        <label>Confirm password</label>
+        <input type="password" name="password-confirm" placeholder="Confirm password" ng-disabled="!user.currentPassword" ng-model="user.confirmPassword" ng-required="user.currentPassword">
+    </div>
+    <button class="ui teal button" type="submit" ng-disabled="profileUpdateForm.$invalid"><i class="save icon"></i> Save</button>
+</form>

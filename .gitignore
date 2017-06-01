@@ -1,0 +1,12 @@
+# IntelliJ IDEA files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# macOS files
+.DS_Store
+._*
+
+# Maven files
+*/target
